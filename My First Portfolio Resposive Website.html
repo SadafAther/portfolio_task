@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadaf Ather - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <head>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1d;
+            background-image: url(background.png);
+            background-size: cover;
+            /* Image ko poori width aur height pe cover karega */
+            background-position: center;
+            /* Image ko center position mein rakhega */
+            background-repeat: no-repeat;
+            /* Image ko repeat hone se roke ga */
+            /* min-height: 100vh; */
+            line-height: 0.5px;
+            /* Screen ki poori height cover karega */
+            margin: 0;
+        }
+       @keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+#logo {
+    display: inline-block;
+    font-size: 24px; /* Ensure visibility */
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    animation: pulse 1.5s infinite ease-in-out; /* Applying animation */
+}
+
+        .bg-custom {
+            background: linear-gradient(45deg, #e6d266, #15b7bd) !important;
+        }
+       
+
+        body {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.8rem; }
+        h3 { font-size: 1.5rem; }
+        p { font-size: 1rem; }
+        
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+            h3 { font-size: 1.3rem; }
+            p { font-size: 0.9rem; }
+        }
+        /* .img-animate {
+    max-width: 40%;  /* Sirf is image ki width 40% ho jayegi */
+    /* height: auto; */
+/* } */ */
+.navbar {
+            height: auto;
+            padding: 10px 0;
+        }
+/* .navbar { */
+    /* height: 70px; Navbar ki height fix ki */
+    .navbar {
+            height: auto;
+            padding: 10px 0;
+        }
+
+.nav-link {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #f5e06c, #0cb9be);
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: #035155;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+#home {
+    padding-top: 150px; /* Navbar se safe distance banaya */
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.gradient-text {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    color: white; /* White text color */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3); /* Light glowing effect */
+    margin-bottom: 30px; /* Add space below */
+}
+
+.animate {
+    font-size: 1.3rem; /* Smaller size */
+    font-weight: 500;
+    color: white; /* White color */
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.616); /* Soft glow effect */
+    letter-spacing: 1px;
+    margin-top: 20px; /* Adjust spacing between h3 items */
+    margin-bottom: 5px; /* Prevent crowding */
+}
+
+
+.animate {
+    opacity: 0;
+    animation: fadeInUp 2s ease-in-out infinite;
+}
+
+h1 {
+    animation-delay: 0.5s;
+}
+
+h3:nth-child(2) {
+    animation-delay: 2s;
+}
+
+h3:nth-child(3) {
+    animation-delay: 3.5s;
+}
+
+h3:nth-child(4) {
+    animation-delay: 5s;
+}
+section {
+    padding: 100px 0; /* Sab sections ke liye equal space */
+}
+
+.img-fluid {
+    box-shadow: 0px 0px 25px 5px rgba(19, 18, 18, 0.9); /* Bright white shadow */
+}
+@keyframes whiteGlow {
+    0%, 100% {
+        box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0px 0px 25px rgba(255, 255, 255, 1);
+    }
+}
+
+.img-fluid {
+    animation: whiteGlow 2s infinite alternate; /* Continuous white glow animation */
+}
+
+/* .gradient-text {
+    background: linear-gradient(45deg, #a08906, #0cb9be);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+} */
+
+#about {
+    margin-top: 250px; /* Navbar se proper gap ke liye */
+}
+
+html {
+    scroll-padding-top: 80px; /* Navbar ka height adjust */
+}
+
+#about {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    color: white; /* White text color */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3); /* Light glowing effect */
+    margin-bottom: 30px; /* Add space below */
+}
+
+
+@keyframes whiteGlow {
+    0%, 100% {
+        box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0px 0px 25px rgba(255, 255, 255, 1);
+    }
+}
+
+main {
+    min-height: calc(100vh - 150px); /* Footer ka overlap remove karega */
+}
+
+footer {
+    margin-top: 80px; /* Footer aur About section ke darmiyan gap */
+    padding: 30px 0;
+    background: #111;
+    text-align: center;
+    color: white;
+}
+
+.skill-icon {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase; /* Adjust size */
+    color: white; /* White text color */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+    color: white; /* Custom icon color */
+    margin-bottom: 10px; /* Space between icon and text */
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-icon:hover {
+    transform: scale(1.2); /* Hover effect */
+    color: #ceb52b; /* Change color on hover */
+}
+
+.img-fluid {
+    margin-bottom: 50px; /* Image aur footer ke darmiyan gap */
+    .img-fluid {
+    box-shadow: 0px 0px 30px 10px rgba(255, 255, 255, 0.9); /* Strong white shadow */
+}
+
+}
+@keyframes whiteGlow {
+    0%, 100% {
+        box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
+    }
+}
+
+.img-fluid {
+    animation: whiteGlow 2s infinite alternate; /* White glow animation */
+}
+#project{  
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase; /* Adjust size */
+    color: rgb(219, 188, 12); /* White text color */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+    color: rgb(241, 219, 90); /* Custom icon color */
+    margin-bottom: 10px; /* Space between icon and text */
+    transition: transform 0.3s ease-in-out;
+}
+.contact-section {
+    background: linear-gradient(45deg, #f0de7a, #038b85); /* Gradient with modern touch */
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Section Heading Styling */
+.contact-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Contact Information */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Icons with Pulse Animation */
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Pulse Effect on Icons */
+.pulse {
+    font-size: 2.5rem;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.contact-item:hover {
+    transform: scale(1.05);
+}
+
+.contact-item:hover i {
+    color: #0b8080;
+}
+
+.contact-item:hover a {
+    color: #f3f732;
+}
+
+/* Keyframes Animations */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" id="logo">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Home Section -->
+    <section id="home" class="d-flex align-items-center">
+        <div class="container text-dark text-center">
+            <div class="row">
+                <div class="col-md-6 p-5 text-start">
+                    <h1 class="gradient-text">Sadaf Ather</h1>
+
+                    <h3 class="animate">Frontend Developer</h3>
+                    <h3 class="animate">MS Office Expert</h3>
+                    <h3 class="animate">Content Writer</h3>
+                </div>
+                <div class="col-md-6 ">
+                    <img src="b0e2f409-f8bc-499c-ac4d-9e320fc3f288.jpg" alt="Sadaf Ather"   style="height: 350px; width:auto ; border-radius: 10px; box-shadow: #c2c4c4;  ">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="hijabi.jpg" alt="Sadaf Ather" class="img-fluid rounded-circle shadow-lg">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">About Me</h2>
+                    <p>I am <strong>Sadaf Ather</strong>, a dedicated <strong>Frontend Developer</strong> with expertise in building modern, responsive, and user-friendly websites...</p>
+                    
+                    <a href="#contact" class="btn btn-bg success mt-3" 
+                    style="background-color: #48ecb5; border: 2px solid #c4b816; color: rgba(241, 248, 248, 0.829); padding: 10px 20px; text-decoration: none; font-size: 18px; font-weight: bold; border-radius: 5px; display: inline-block; transition: all 0.3s ease-in-out;" 
+                    onmouseover="this.style.backgroundColor='#085c5c'; this.style.borderColor='#085c5c'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 10px rgba(0, 0, 0, 0.2)';" 
+                    onmouseout="this.style.backgroundColor='#0b8080'; this.style.borderColor='#0b8080'; this.style.transform='scale(1)'; this.style.boxShadow='none';">
+                    Contact Me
+                 </a>
+                 
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    on>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container mt-5 mb-5 fade-in text-center text-light">
+        <h2 class="mb-4 text-light">Skills</h2>
+        <p>Hi, I'm Sadaf Ather – a passionate Frontend Developer, skilled in HTML, CSS, JavaScript, Bootstrap, and jQuery, crafting modern and attractive web designs.</p>
+        <p>I’m also proficient in MS Office, with a knack for organizing and presenting information effectively. Additionally, I bring my creativity to life as a Content Writer, delivering engaging and impactful content.</p>
+    
+        <!-- Skills Icons Section -->
+        <div class="row mt-4">
+            <div class="col-md-3 col-6">
+                <i class="fab fa-html5 skill-icon"></i>
+                <p>HTML</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fab fa-css3-alt skill-icon"></i>
+                <p>CSS</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fab fa-js skill-icon"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fab fa-bootstrap skill-icon"></i>
+                <p>Bootstrap</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fab fa-wordpress skill-icon"></i>
+                <p>WordPress</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fas fa-database skill-icon"></i>
+                <p>Data Entry</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fas fa-pencil-alt skill-icon"></i>
+                <p>Content Writing</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fas fa-search skill-icon"></i>
+                <p>SEO</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mt-5 fade-in text-center text-light">
+        <h2>Projects</h2>
+        <p>Some of my key projects include:</p>
+        <ul>
+            <li>One Page Website</li>
+            <li> https://github.com/SadafAther/Elite--Footwear.git</li>
+            <li>Origami Website group  Project</li>
+            <li>https://muhammad-ayaan-1.github.io/Origami-for-All/</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="text-center mb-4">Get in Touch</h2>
+            <p class="text-center text-muted">Let's connect! Feel free to reach out for collaborations or inquiries.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope pulse"></i>
+                            <a href="mailto:sadafather85@gmail.com">sadafather85@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp pulse"></i>
+                            <a href="https://wa.me/923362537603" target="_blank">+92 336 2537603</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Sadaf Ather. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        $(document).ready(function() {
+            $(".animate").each(function(i) {
+                $(this).delay(i * 500).fadeIn(1000);
+            });
+            $(".img-animate").hide().fadeIn(2000);
+            $(".fade-in").hide().fadeIn(1500);
+        });
+        setInterval(() => {
+    document.getElementById("logo").classList.toggle("pulse-effect");
+}, 1500);
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
